@@ -619,10 +619,11 @@
 
       <div class="hero-visual">
         <div class="hero-car" id="heroCar">
-          <div class="hero-slide active" style="background-image:url('assets/Kia%20SUV.png');"></div>
-          <div class="hero-slide" style="background-image:url('assets/White%20Toyota%20SUV.png');"></div>
+          <div class="hero-slide active" style="background-image:url('assets/Fortuner.jpeg');"></div>
+          <div class="hero-slide" style="background-image:url('assets/Scorpio%20N.png');"></div>
           <div class="hero-slide" style="background-image:url('assets/White%20Suzuki%20Baleno.png');"></div>
-          <div class="hero-slide" style="background-image:url('assets/White%20Hyundai%20i20.png');"></div>
+          <div class="hero-slide" style="background-image:url('assets/Swift.png');"></div>
+          <div class="hero-slide" style="background-image:url('assets/Sonat.png');"></div>
           <div class="floating-tag">★ 4.9 RATED</div>
           <div class="plate-badge">
             <span class="flag"></span>
@@ -966,95 +967,64 @@
 const whatsappNumber = "918360300955";
 
 const CARS = [
-{
-  id:"swift",
-  name:"Swift",
-  type:"hatchback",
-  typeLabel:"Hatchback",
-  img:"assets/Swift.png",
-  rate:2000,
-  desc:"Light, nimble and easy on fuel for everyday city runs.",
-  seats:"5 Seats",
-  trans:"Manual",
-  ac:"AC",
-  kmLimit:"250 km/day"
-},
   {
-    id:"i20auto", name:"i20 Auto", type:"hatchback", typeLabel:"Hatchback",
-    img:"assets/White%20Hyundai%20i20.png", rate:2200,
-    desc:"Automatic hatchback with a comfortable, premium cabin.",
+    id:"swift", name:"Swift", type:"hatchback", typeLabel:"Hatchback",
+    img:"assets/Swift.png", rate:2000,
+    desc:"Light, nimble and easy on fuel for everyday city runs.",
+    seats:"5 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
+  },
+  {
+    id:"i20", name:"i20", type:"hatchback", typeLabel:"Hatchback",
+    img:"assets/I%2020.png", rate:2200,
+    desc:"Comfortable hatchback with a premium cabin for city and highway trips.",
     seats:"5 Seats", trans:"Automatic", ac:"AC", kmLimit:"250 km/day"
   },
   {
-    id:"balenomanual", name:"Baleno Manual", type:"hatchback", typeLabel:"Hatchback",
+    id:"baleno", name:"Baleno", type:"hatchback", typeLabel:"Hatchback",
     img:"assets/White%20Suzuki%20Baleno.png", rate:2000,
     desc:"Spacious hatchback, smooth to drive on long or short trips.",
     seats:"5 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
   },
   {
-    id:"balenoat", name:"Baleno AT", type:"hatchback", typeLabel:"Hatchback",
-    img:"assets/White%20Suzuki%20Baleno.png", rate:2200,
-    desc:"Automatic version of the Baleno — effortless city driving.",
+    id:"sonet", name:"Sonet", type:"suv", typeLabel:"SUV",
+    img:"assets/Sonat.png", rate:2400,
+    desc:"Compact SUV with a comfortable cabin and confident road presence.",
     seats:"5 Seats", trans:"Automatic", ac:"AC", kmLimit:"250 km/day"
   },
   {
-    id:"sonet", name:"Sonet AMT Diesel", type:"suv", typeLabel:"SUV",
-    img:"assets/Kia%20SUV.png", rate:2400,
-    desc:"Compact SUV with a punchy diesel engine and AMT ease.",
-    seats:"5 Seats", trans:"AMT · Diesel", ac:"AC", kmLimit:"250 km/day"
-  },
-  {
-    id:"venue", name:"Venue Petrol", type:"suv", typeLabel:"SUV",
+    id:"toyota-suv", name:"Toyota SUV", type:"suv", typeLabel:"SUV",
     img:"assets/White%20Toyota%20SUV.png", rate:2500,
-    desc:"Well-rounded compact SUV, easy to drive in traffic and highways.",
-    seats:"5 Seats", trans:"Manual · Petrol", ac:"AC", kmLimit:"250 km/day"
-  },
-  {
-    id:"syros", name:"Syros Manual", type:"suv", typeLabel:"SUV",
-    img:"assets/SUV.png", rate:2500,
-    desc:"Roomy new-age SUV with a commanding driving position.",
+    desc:"Spacious SUV, comfortable for city drives, highways and family trips.",
     seats:"5 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
   },
   {
-    id:"hyryder", name:"Hyryder AT", type:"suv", typeLabel:"SUV",
-    img:"assets/Kia%20SUV.png", rate:2600,
-    desc:"Automatic SUV known for a refined ride and great mileage.",
-    seats:"5 Seats", trans:"Automatic", ac:"AC", kmLimit:"250 km/day"
-  },
-  {
-    id:"cretamanual", name:"Creta Manual", type:"suv", typeLabel:"SUV",
-    img:"assets/White%20Toyota%20SUV.png", rate:3000,
-    desc:"India's favourite SUV — bold looks, comfortable for families.",
-    seats:"5 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
-  },
-  {
-    id:"cretaamt", name:"Creta AMT", type:"suv", typeLabel:"SUV",
-    img:"assets/SUV.png", rate:3000,
-    desc:"The Creta with AMT convenience for stress-free city drives.",
-    seats:"5 Seats", trans:"AMT", ac:"AC", kmLimit:"250 km/day"
-  },
-  {
-    id:"gimny", name:"Gimny 4x4", type:"suv", typeLabel:"SUV",
-    img:"assets/Kia%20SUV.png", rate:3500,
-    desc:"Built for off-road adventures with genuine 4x4 capability.",
-    seats:"5 Seats", trans:"Manual · 4x4", ac:"AC", kmLimit:"250 km/day"
-  },
-  {
-    id:"scorpioclassic", name:"Scorpio Classic", type:"suv", typeLabel:"SUV",
-    img:"assets/White%20Toyota%20SUV.png", rate:4200,
-    desc:"Rugged, muscular SUV built for long highway journeys.",
+    id:"scorpio", name:"Scorpio", type:"suv", typeLabel:"SUV",
+    img:"assets/Scorpio.png", rate:3000,
+    desc:"Rugged SUV with a commanding driving position and strong road presence.",
     seats:"7 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
   },
   {
-    id:"scorpion", name:"Scorpio N", type:"suv", typeLabel:"SUV",
-    img:"assets/SUV.png", rate:4200,
-    desc:"The next-gen Scorpio — bigger, bolder and more refined.",
+    id:"scorpio-s11", name:"Scorpio S11", type:"suv", typeLabel:"SUV",
+    img:"assets/Scorpio%20s%2011.png", rate:3500,
+    desc:"Premium Scorpio variant, ideal for comfortable family journeys.",
     seats:"7 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
   },
   {
-    id:"scorpionauto", name:"Scorpio N Auto", type:"suv", typeLabel:"SUV",
-    img:"assets/Kia%20SUV.png", rate:4500,
-    desc:"Scorpio N with automatic transmission — flagship comfort.",
+    id:"scorpio-n", name:"Scorpio N", type:"suv", typeLabel:"SUV",
+    img:"assets/Scorpio%20N.png", rate:4200,
+    desc:"Next-generation Scorpio with a bold design and refined cabin.",
+    seats:"7 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
+  },
+  {
+    id:"scorpio-atm", name:"Scorpio ATM", type:"suv", typeLabel:"SUV",
+    img:"assets/Scorpio%20atm.png", rate:4500,
+    desc:"Scorpio automatic for an easier and more relaxed driving experience.",
+    seats:"7 Seats", trans:"Automatic", ac:"AC", kmLimit:"250 km/day"
+  },
+  {
+    id:"fortuner", name:"Fortuner", type:"suv", typeLabel:"SUV",
+    img:"assets/Fortuner.jpeg", rate:5000,
+    desc:"Premium full-size SUV built for family trips and long highway drives.",
     seats:"7 Seats", trans:"Automatic", ac:"AC", kmLimit:"250 km/day"
   }
 ];
