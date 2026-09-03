@@ -539,7 +539,8 @@
     .t-arrow{display:none;}
     .float-stack{right:16px;bottom:16px;}
   }
-
+  
+  
   
 </style>
 </head>
@@ -619,6 +620,9 @@
 
       <div class="hero-visual">
         <div class="hero-car" id="heroCar">
+           <div class="hero-slide active" style="background-image:url('assets/creta.png');"></div>
+          <div class="hero-slide active" style="background-image:url('assets/Toyota.png');"></div>
+           <div class="hero-slide active" style="background-image:url('assets/Thar ROXX.png');"></div>
           <div class="hero-slide active" style="background-image:url('assets/Fortuner.jpeg');"></div>
           <div class="hero-slide" style="background-image:url('assets/Scorpio%20N.png');"></div>
           <div class="hero-slide" style="background-image:url('assets/White%20Suzuki%20Baleno.png');"></div>
@@ -975,43 +979,43 @@ const CARS = [
   },
   {
     id:"i20", name:"i20", type:"hatchback", typeLabel:"Hatchback",
-    img:"assets/I%2020.png", rate:2200,
+    img:"assets/I%2020.png", rate:2000, colorOption:"1 More Colors", 
     desc:"Comfortable hatchback with a premium cabin for city and highway trips.",
     seats:"5 Seats", trans:"Automatic", ac:"AC", kmLimit:"250 km/day"
   },
   {
     id:"baleno", name:"Baleno", type:"hatchback", typeLabel:"Hatchback",
-    img:"assets/White%20Suzuki%20Baleno.png", rate:2000,
+    img:"assets/White%20Suzuki%20Baleno.png", rate:2000,colorOption:"2 More Colors",
     desc:"Spacious hatchback, smooth to drive on long or short trips.",
     seats:"5 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
   },
   {
     id:"sonet", name:"Sonet", type:"suv", typeLabel:"SUV",
-    img:"assets/Sonat.png", rate:2400,
+    img:"assets/Sonat.png", rate:2500,
     desc:"Compact SUV with a comfortable cabin and confident road presence.",
     seats:"5 Seats", trans:"Automatic", ac:"AC", kmLimit:"250 km/day"
   },
   {
-    id:"toyota-suv", name:"Toyota SUV", type:"suv", typeLabel:"SUV",
-    img:"assets/White%20Toyota%20SUV.png", rate:2500,
+    id:"XUV", name:"XUV ", type:"suv", typeLabel:"SUV",
+    img:"assets/XUV (2).png", rate:2500,
     desc:"Spacious SUV, comfortable for city drives, highways and family trips.",
     seats:"5 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
   },
   {
     id:"scorpio", name:"Scorpio", type:"suv", typeLabel:"SUV",
-    img:"assets/Scorpio.png", rate:3000,
+    img:"assets/Scorpio.png", rate:4500,
     desc:"Rugged SUV with a commanding driving position and strong road presence.",
     seats:"7 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
   },
   {
     id:"scorpio-s11", name:"Scorpio S11", type:"suv", typeLabel:"SUV",
-    img:"assets/Scorpio%20s%2011.png", rate:3500,
+    img:"assets/Scorpio%20s%2011.png", rate:4000,
     desc:"Premium Scorpio variant, ideal for comfortable family journeys.",
     seats:"7 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
   },
   {
     id:"scorpio-n", name:"Scorpio N", type:"suv", typeLabel:"SUV",
-    img:"assets/Scorpio%20N.png", rate:4200,
+    img:"assets/Scorpio%20N.png", rate:4500,
     desc:"Next-generation Scorpio with a bold design and refined cabin.",
     seats:"7 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
   },
@@ -1023,10 +1027,28 @@ const CARS = [
   },
   {
     id:"fortuner", name:"Fortuner", type:"suv", typeLabel:"SUV",
-    img:"assets/Fortuner.jpeg", rate:5000,
+    img:"assets/Fortuner.jpeg", rate:7000,
     desc:"Premium full-size SUV built for family trips and long highway drives.",
     seats:"7 Seats", trans:"Automatic", ac:"AC", kmLimit:"250 km/day"
-  }
+  },
+   {
+    id:"Thar ROXX", name:"Thar ROXX", type:"suv", typeLabel:"SUV",
+    img:"assets/Thar ROXX.PNG", rate:5000,
+    desc:"Premium full-size SUV built for family trips and long highway drives.",
+    seats:"7 Seats", trans:"Automatic", ac:"AC", kmLimit:"250 km/day"
+  },
+   {
+    id:"Toyota", name:"Toyota", type:"suv", typeLabel:"SUV",
+    img:"assets/Toyota.png", rate:2500,
+    desc:"Spacious SUV, comfortable for city drives, highways and family trips.",
+    seats:"5 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
+  },
+   {
+    id:"Creta", name:"Creta", type:"suv", typeLabel:"SUV",
+    img:"assets/Creta.png", rate:3500,colorOption:"2 More Colors",
+    desc:"Spacious SUV, comfortable for city drives, highways and family trips.",
+    seats:"5 Seats", trans:"Manual", ac:"AC", kmLimit:"250 km/day"
+  },
 ];
 
 let currentFilter = "all";
@@ -1055,7 +1077,7 @@ function renderCars(){
         </div>
         <p class="desc">${c.desc}</p>
         <div class="car-features">
-          <span>${c.seats}</span><span>${c.trans}</span><span>${c.ac}</span><span>${c.kmLimit}</span>
+          <span>${c.seats}</span><span>${c.trans}</span><span>${c.ac}</span><span>${c.kmLimit}</span> ${c.colorOption ? `<span>${c.colorOption}</span>` : ""}
         </div>
         <div class="car-actions">
           <button class="book-car" onclick="selectCar('${c.id}')">Book This Car</button>
